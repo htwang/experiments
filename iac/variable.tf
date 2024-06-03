@@ -5,13 +5,13 @@ variable "aws_profile" {
 variable "public_subnet_cidrs" {
   type        = list(string)
   description = "cidrs for public subnets"
-  default     = ["192.168.1.0/24", "192.168.2.0/24", "192.168.3.0/24"]
+  default     = ["172.16.1.0/24", "172.16.2.0/24", "172.16.3.0/24"]
 }
 
 variable "private_subnet_cidrs" {
   type        = list(string)
   description = "cidrs for private subnets"
-  default     = ["192.168.127.0/24", "192.168.128.0/24", "192.168.129.0/24"]
+  default     = ["172.16.127.0/24", "172.16.128.0/24", "172.16.129.0/24"]
 }
 
 variable "vpc_name" {
