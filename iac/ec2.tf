@@ -42,6 +42,7 @@ data "aws_ami" "ubuntu" {
 
 # spot request
 resource "aws_spot_instance_request" "this" {
+  count                = var.request_ec2 ? 1 : 0
   ami                  = data.aws_ami.ubuntu.image_id
   spot_price           = "0.016"
   instance_type        = "t2.micro"
